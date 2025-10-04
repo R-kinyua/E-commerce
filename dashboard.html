@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Fashion Design Page</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<style>
+    /* Basic CSS styles */
+
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #dfd3c7;
+    }
+
+    header {
+        background-color: #8d4e2b;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    header nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    header nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+
+    header nav ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 100px 0;
+        background-image: url();
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+    }
+
+    .container {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        padding: 40px 0;
+    }
+
+    .collection-item {
+        margin-bottom: 40px;
+    }
+
+    .collection-item img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #8d4e2b;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+    .btn:hover {
+        background-color: #8e6e63;
+    }
+    .logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    h1{
+        text-align: center;
+        color: #0d0d0d;
+        font-family: Algerian;
+    }
+    h2{
+        color: #0d0d0d;
+    }
+    a{
+        color: #8d4e2b;
+        text-decoration: none;
+    }
+    p{
+        font-size: 16px; /* Adjust font size as needed */
+        color: #8d4e2b; /* Adjust text color */
+        margin-top: 10px;
+        font-family: "Agency FB";
+        font-size: 20px;
+    }
+    .social_icons{
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    .social_icons a{
+        display: block;
+        height: 45px;
+        width: 30%;
+        line-height: 45px;
+        text-align: center;
+        border-radius: 5px;
+        font-size: 20px;
+        color: #fff;
+        text-decoration: none;
+        transition: all 0.3s linear;
+    }
+    .social_icons a span{
+        margin-left: 5px;
+        font-size: 18px;
+    }
+    .social_icons a:first-child{
+        margin-right: 5px;
+        background: #4267B2;
+    }
+    .social_icons a:first-child:hover{
+        background: #375695;
+    }
+    .social_icons a:last-child{
+        margin-left: 5px;
+        background: #1DA1F2;
+    }
+    .social_icons a:last-child:hover{
+        background: #0d8bd9;
+    }
+
+</style>
+<body><br>
+
+<div class="logo">
+    <img src="Apollomain.jpg.png" style="height: 30px;width: 150px" alt="Logo">
+</div>
+<h2 style="font-family: 'Agency FB'">Welcome <?php echo $_SESSION['email']; ?>!</h2>
+<header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#collections">Collections</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="home">
+    <div class="hero">
+        <h1>Welcome to Your Fashion World</h1>
+        <p>Discover the latest trends and timeless styles crafted just for you.</p>
+        <a href="#collections" class="btn">Explore Collections</a>
+    </div>
+</section>
+
+<section id="collections">
+    <div class="container">
+        <h2>Our Collections</h2>
+        <div class="collection-item">
+            <table>
+                <tr>
+                    <td> <img src="White%20Tuxedo.jpg" alt="Collection Image"> <p class="image-description">Del.Angel Tux.</p></td>
+
+                    <td> <img src="Black%20suite.jpg" alt="Collection Image"> <p class="image-description">Black Smith.</p></td>
+
+                    <td> <img src="Brown%20Tuxedo.jpg" alt="Collection Image"> <p class="image-description">KingsMan Brown Tuxedo.</p></td>
+
+                </tr>
+                <tr>
+                    <td> <img src="Green%20Senator.jpg" alt="Collection Image" style="height: 500px"> <p class="image-description">Royal Green Senator.</p></td>
+
+                    <td> <img src="Black%20Piece.jpg" alt="Collection Image"> <p class="image-description">Black Elegance Lace Senator.</p></td>
+
+                    <td> <img src="agbada.jpg" alt="Collection Image" style="height: 500px"> <p class="image-description">Nigerian Traditional Agbada.</p></td>
+
+                </tr>
+            </table>
+            <h3>Spring/Summer 2024</h3>
+            <p>Explore our vibrant and elegant collection inspired by the beauty of nature.</p>
+            <a href="#" class="btn">View Collection</a>
+        </div>
+        <!-- Repeat the above structure for each collection -->
+    </div>
+</section>
+
+<section id="about">
+    <div class="container">
+        <h2>About Us</h2>
+        <p>Learn about our passion for fashion and commitment to quality craftsmanship.</p>
+        <a href="#" class="btn">Read More</a>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <p>Have a question or feedback? Reach out to us!</p>
+        <a href="#" class="btn">Contact Now</a>
+    </div>
+</section>
+
+<div class="social_icons">
+    <a href="https://www.facebook.com/ApolloApparrel/"><i class="fab fa-facebook-f"></i> <span>Facebook</span></a>
+    <a href="#"><i class="fab fa-twitter"></i><span>Twitter</span></a>
+</div>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Your Fashion Design Page. All rights reserved.</p>
+    </div>
+    <a href="logout.html">Logout</a>
+</footer>
+</body>
+</html>
