@@ -22,22 +22,24 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Build, Tag, and Push Docker image
-        # Using build-push-action is the recommended modern approach
-        uses: docker/build-push-action@v5 
-        with:
-          context: .
-          push: true
-          tags: ryanthedev001/ecommercetest:latest 
+      # NOTE: This manual build/push pattern is less robust than using build-push-action, 
+      # but we will keep it for now and only apply the immediate fix.
+
+      - name: Build Docker image
+        run: |
+          # Confirmed image name: ryanthedev001/ecommercetest
+          docker build -t ryanthedev001/ecommercetest:latest .
 
       - name: Scan Docker image with Trivy
-        # *** FIX FOR THE ERROR ***
-        # Replaced the failing '@v0' with a specific, stable version to resolve the "Unable to find version" error.
-        uses: aquasecurity/trivy-action@v0.33.1
+        # *** IMMEDIATE FIX: Using '@master' to bypass the tag resolution error ***
+        uses: aquasecurity/trivy-action@master 
         with:
           image-ref: 'ryanthedev001/ecommercetest:latest'
-          scan-type: 'image'
-          format: 'table'
-          # Set exit code to 0 to ensure the pipeline continues to the next step (Push)
           exit-code: '0' 
           severity: 'CRITICAL,HIGH'
+          format: 'table'
+
+      - name: Push Docker image to DockerHub
+        run: |
+          # Confirmed image name: ryanthedev001/ecommercetest
+          docker push ryanthedev001/ecommercetest:latest
