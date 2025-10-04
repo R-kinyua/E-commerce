@@ -1,0 +1,4 @@
+# Python requirements for monitoring, IaC, and DevOps tools
+boto3
+awscli
+requests
