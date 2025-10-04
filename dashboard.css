@@ -1,0 +1,130 @@
+/* Basic CSS styles */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #dfd3c7;
+}
+
+header {
+    background-color: #8d4e2b;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 0;
+    background-image: url('path_to_hero_background_image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.collection-item {
+    margin-bottom: 40px;
+}
+
+.collection-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #8d4e2b;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #8e6e63;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+h1{
+    text-align: center;
+    color: #0d0d0d;
+    font-family: Algerian;
+}
+h2{
+    color: #0d0d0d;
+}
+a{
+    color: #8d4e2b;
+    text-decoration: none;
+}
+p{
+    font-size: 16px; /* Adjust font size as needed */
+    color: #8d4e2b; /* Adjust text color */
+    margin-top: 10px;
+    font-family: "Agency FB";
+    font-size: 20px;
+}
+.social_icons{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.social_icons a{
+    display: block;
+    height: 45px;
+    width: 30%;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s linear;
+}
+.social_icons a span{
+    margin-left: 5px;
+    font-size: 18px;
+}
+.social_icons a:first-child{
+    margin-right: 5px;
+    background: #4267B2;
+}
+.social_icons a:first-child:hover{
+    background: #375695;
+}
+.social_icons a:last-child{
+    margin-left: 5px;
+    background: #1DA1F2;
+}
+.social_icons a:last-child:hover{
+    background: #0d8bd9;
+}
