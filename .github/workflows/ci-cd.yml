@@ -22,8 +22,6 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      # NOTE: This manual build/push pattern is less robust than using build-push-action, 
-      # but we will keep it for now and only apply the immediate fix.
 
       - name: Build Docker image
         run: |
